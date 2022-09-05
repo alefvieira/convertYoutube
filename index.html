@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    #iframe{
+        height: 600px;
+    }
+    
+    </style>
+</head>
+<body>
+    <div class="formulario">
+        <form onsubmit="enviar(event)">
+            <label> Entre com o link do video
+                <input type="url" id="url" name="url" required>
+            </label>
+
+            <label> Formato
+                <select name="formato" id="formato">
+                    <option value="mp3">MP3</option>
+                    <option value="mp4">MP4</option>
+                </select>
+            </label>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+
+    <div class="fundo">
+        <div class="popup">
+            <div class="close_popup" ><button  onclick="closePopup()">x</button></div>
+            <div id="iframe"></div>
+        </div>
+    </div>
+
+
+    <script src="baixar.js"></script>
+</body>
+</html>

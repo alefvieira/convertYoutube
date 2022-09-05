@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    overflow-x: hidden;
+}
+
+.formulario{
+    /* position: fixed; */
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.formulario form *{
+    display: block;
+    margin: 5px auto;
+    text-align: center;
+}
+.formulario form{
+    background-color: #f8cfcf;
+    border-radius:20px;
+    padding:  35px 25px;
+    width: 600px;
+    border: 1px solid #962d2d;
+    box-shadow: .0rem .1rem 3px 0px;
+}
+.formulario form #formato{ width: 80%; padding: 5px;}
+.formulario form #url{width: 100%; padding:10px; outline:0; border-radius: 5px}
+.formulario form button[type='submit']{width: 80%; padding: 10px; margin-top: 50px; border-radius: 10px; color: white; box-shadow: bold; background-color: #962d2d; letter-spacing: .4rem;text-transform:uppercase ;cursor: pointer;}
+.formulario form button[type='submit']:hover{opacity: 0.8;}
+
+.fundo{
+    visibility: hidden;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0, 0.8);
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup{
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0.25rem 0.2rem 0.2rem 1px;
+    width: 95%;
+    height: auto;
+    background-color:white;
+    overflow-y: hidden;
+}
+.popup.active{
+    -webkit-animation: scale-in 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    animation: scale-in 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+#iframe{
+    overflow: hidden;
+}
+.close_popup button{
+    cursor: pointer;
+    border-radius: 100%;
+    position: absolute;
+    right: 0;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 14px;
+}
+
+
+@keyframes scale-in {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+    }
+    /* 50% {
+      -webkit-transform: scale(.5);
+              transform: scale(.5);
+    } */
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+}
+
+@media (max-width: 768px){
+    .formulario form{
+        width: 98%;
+    }
+}
